@@ -11,7 +11,7 @@ import String
 import List
 
 
-{-| True for ASCII whitesapce characters `\b\t\n\v\f\r`
+{-| True for ASCII whitespace characters `\b\t\n\v\f\r`
 -}
 isWhitespace : Char -> Bool
 isWhitespace char =
