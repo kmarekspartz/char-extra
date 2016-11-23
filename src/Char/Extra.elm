@@ -1,4 +1,4 @@
-module Char.Extra where
+module Char.Extra exposing (..)
 
 {-| Extra functions for working with characters.
 
@@ -10,7 +10,9 @@ module Char.Extra where
 import String
 import List
 
-{-| True for ASCII whitesapce characters `\b\t\n\v\f\r` -}
+
+{-| True for ASCII whitespace characters `\b\t\n\v\f\r`
+-}
 isWhitespace : Char -> Bool
 isWhitespace char =
-  List.member char <| String.toList " \t\r\n\v\f"
+    List.member char <| String.toList " \t\x0D\n\x0B\x0C"
